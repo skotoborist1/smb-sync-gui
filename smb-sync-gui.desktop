@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=2.3
+Type=Application
+Terminal=false
+Categories=Utility;FileTools;Network;
+Exec=sh -c "~/.local/share/applications/smb-sync-gui/smb-sync-gui.py"
+Icon=smb-sync-gui
+Name=SMB Sync
+Comment=Mirroring data between SMB shares
+Name[ru]=SMB Sync
+Comment[ru]=Зеркалирование данных между SMB-шарами
+
