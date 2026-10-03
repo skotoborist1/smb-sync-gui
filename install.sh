@@ -49,14 +49,19 @@ curl -sL "$REPO_RAW_URL/smb-sync-gui.png" -o "$TARGET_DIR/smb-sync-gui.png"
 echo "Загрузка smb-sync-gui.desktop..."
 curl -sL "$REPO_RAW_URL/smb-sync-gui.desktop" -o "$TARGET_DIR/smb-sync-gui.desktop"
 
+# НАША НОВАЯ СТРОЧКА: Скачиваем деинсталлятор прямо в папку приложения
+echo "Загрузка uninstall.sh..."
+curl -sL "$REPO_RAW_URL/uninstall.sh" -o "$TARGET_DIR/uninstall.sh"
+
 # Проверяем, что файлы скачались успешно
 if [ -s "$TARGET_DIR/smb-sync-gui.py" ] && [ -s "$TARGET_DIR/locales.json" ]; then
-    # Динамически прописываем полный путь к иконке под текущего пользователя Linux
+    # Динамически прописываем полный путь к иконке
     sed -i "s|Icon=smb-sync-gui|Icon=$TARGET_DIR/smb-sync-gui.png|g" "$TARGET_DIR/smb-sync-gui.desktop"
     
-    # Выдаем права на исполнение
+    # Выдаем права на исполнение (добавляем права и для нашего деинсталлятора!)
     chmod +x "$TARGET_DIR/smb-sync-gui.py"
     chmod +x "$TARGET_DIR/smb-sync-gui.desktop"
+    chmod +x "$TARGET_DIR/uninstall.sh"            # Делаем его запускаемым!
     echo -e "${GREEN}Все файлы успешно загружены в: $TARGET_DIR${NC}"
 else
     echo -e "${RED}ОШИБКА: Не удалось скачать файлы приложения с GitHub!${NC}"
