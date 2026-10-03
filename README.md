@@ -65,7 +65,7 @@ curl -sL https://raw.githubusercontent.com/skotoborist1/smb-sync-gui/main/instal
 ```
 
 Этот скрипт автоматически определит ваш дистрибутив (Fedora, Ubuntu/Debian или Arch Linux), установит все необходимые зависимости (`rsync`, `cifs-utils`, `smbclient`), загрузит свежие файлы приложения и настроит ярлык в системном меню.
-```
+
 4. **Готово!** Иконка «SMB Sync» мгновенно появится в системном меню ваших приложений.
 
 ---
