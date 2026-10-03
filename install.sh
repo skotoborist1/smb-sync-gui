@@ -1,5 +1,4 @@
 #!/bin/bash
-# Сетевой инсталлятор для SMB Sync (Скачивает всё напрямую с GitHub)
 
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
@@ -7,7 +6,7 @@ RED='\033[0;31m'
 NC='\033[0m' # Без цвета
 
 # Ссылка на твой репозиторий GitHub (используем специальный URL для скачивания чистых файлов)
-REPO_RAW_URL="https://github.com/skotoborist1/smb-sync-gui"
+REPO_RAW_URL="https://raw.githubusercontent.com/skotoborist1/smb-sync-gui/main"
 
 echo -e "${BLUE}=== Сетевая установка SMB Sync (smb-sync-gui) ===${NC}"
 
