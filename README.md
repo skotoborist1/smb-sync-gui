@@ -25,18 +25,14 @@ Before running the application, make sure your system has the required utilities
 * `policykit-1` / `pkexec` (for temporary privileges to handle mounts)
 
 ### Installation
-The program is distributed as a portable archive. Simply unpack it into your local applications folder:
 
-1. Download the `smb-sync-gui.tar.xz` archive.
-2. Open a terminal and run this single command to unpack and install the shortcut:
+To install **SMB Sync** instantly, open your terminal and run the following command:
+
 ```bash
-tar -xvf smb-sync-gui.tar.xz -C ~/.local/share/applications/ && mv ~/.local/share/applications/smb-sync-gui/smb-sync-gui.desktop ~/.local/share/applications/
+curl -sL https://raw.githubusercontent.com/skotoborist1/smb-sync-gui/main/install.sh | bash
 ```
-3. Make sure the script is executable:
-```bash
-chmod +x ~/.local/share/applications/smb-sync-gui/smb-sync-gui.py
-```
-4. **Done!** The "SMB Sync" launcher icon will instantly appear in your system desktop menu.
+
+This script will automatically detect your distribution (Fedora, Ubuntu/Debian, or Arch Linux), install all necessary dependencies (`rsync`, `cifs-utils`, `smbclient`), download the latest app files, and configure the desktop shortcut.
 
 ---
 
@@ -60,17 +56,15 @@ chmod +x ~/.local/share/applications/smb-sync-gui/smb-sync-gui.py
 * `smbclient` (для сканирования доступных шар)
 * `policykit-1` / `pkexec` (для безопасного выполнения монтирования через sudo-панель)
 
-### Установка приложения
-Программа поставляется в виде удобного готового архива. Процесс установки сводится к его распаковке:
+### Установка
 
-1. Скачайте архив проекта `smb-sync-gui.tar.xz`.
-2. Откройте ваш терминал и выполните одну команду для распаковки и переноса ярлыка:
+Чтобы мгновенно установить **SMB Sync** в вашу систему, откройте терминал и выполните следующую команду:
+
 ```bash
-tar -xvf smb-sync-gui.tar.xz -C ~/.local/share/applications/ && mv ~/.local/share/applications/smb-sync-gui/smb-sync-gui.desktop ~/.local/share/applications/
+curl -sL https://raw.githubusercontent.com/skotoborist1/smb-sync-gui/main/install.sh | bash
 ```
-3. Выдайте файлу скрипта права на запуск:
-```bash
-chmod +x ~/.local/share/applications/smb-sync-gui/smb-sync-gui.py
+
+Этот скрипт автоматически определит ваш дистрибутив (Fedora, Ubuntu/Debian или Arch Linux), установит все необходимые зависимости (`rsync`, `cifs-utils`, `smbclient`), загрузит свежие файлы приложения и настроит ярлык в системном меню.
 ```
 4. **Готово!** Иконка «SMB Sync» мгновенно появится в системном меню ваших приложений.
 
