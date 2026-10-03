@@ -42,10 +42,10 @@ if [ -d "$TARGET_DIR" ]; then
         update-desktop-database "$APP_DIR"
     fi
     
-    killall -HUP gnome-shell &>/dev/null
     echo -e "$MSG_SUCCESS"
 else
     echo -e "$MSG_ERR $TARGET_DIR."
     echo "$MSG_ERR_HINT"
 fi
+
 
